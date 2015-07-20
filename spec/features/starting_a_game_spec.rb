@@ -13,4 +13,15 @@ feature 'Starting a new game' do
     click_on 'submit'
     expect(page).to have_content 'Hello Paul'
   end
+
+  scenario 'Start game' do
+    visit '/new_game'
+    fill_in 'name', with: 'Paul'
+    click_on 'submit'
+    click_on 'Start Game'
+    expect(page).to have_content 'Player 1 place your ship'
+  end
+
+  scenario 'Player 1 places a ship' do
+
 end

@@ -10,6 +10,10 @@ class BattleshipWeb < Sinatra::Base
     erb :new_game
   end
 
+  get '/start_game' do
+    erb :start_game
+  end
+
   run! if app_file == $0
   set :views, proc { File.join(root, '..', 'views')}
 end
