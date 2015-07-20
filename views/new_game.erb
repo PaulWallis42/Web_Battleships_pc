@@ -1,1 +1,8 @@
 What's your name?
+<form action="/new_game">
+  <input type="text" name="name">
+  <input type="submit" value="submit">
+</form>
+<% if @name %>
+  Hello <%= @name %>
+<% end %>
