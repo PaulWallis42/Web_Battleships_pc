@@ -19,9 +19,8 @@ feature 'Starting a new game' do
     fill_in 'name', with: 'Paul'
     click_on 'submit'
     click_on 'Start Game'
-    expect(page).to have_content 'Player 1 place your ship'
+    expect(page).to have_content 'What type of ship would you like?'
   end
 
-  scenario 'Player 1 places a ship' do
 
 end
