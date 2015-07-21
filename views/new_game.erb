@@ -1,9 +1,31 @@
+<% if @name == nil %>
 What's your name?
 <form action="/new_game">
   <input type="text" name="name">
   <input type="submit" value="submit">
 </form>
+<% end %>
 <% if @name %>
   Hello <%= @name %>, you are player 1
+  <br>
+  <br>
+<form action"/new_game">
+  What type of ship would you like?
+  <input type="text" name="ship">
+  <br>
+  <br>
+    Please give a Coordinate to place your ship
+  <input type="text" name="coordinate">
+  <br>
+  <br>
+    Please give the orientation of your ship
+  <input type="text" name="orientation">
+  <br>
+  <br>
+  <input type="submit" value="submit">
+</form>
 <% end %>
 <a href='start_game'>Start Game</a>
+<%= @ship %>
+<%= @coordinate %>
+<%= @orientation %>
